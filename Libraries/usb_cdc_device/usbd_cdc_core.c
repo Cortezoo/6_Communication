@@ -70,7 +70,7 @@
 #include "main.h"
 #include "gpio.h"
 
-char led[4];
+
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
   * @{
   */
@@ -92,6 +92,7 @@ char led[4];
 /** @defgroup usbd_cdc_Private_Defines
   * @{
   */ 
+extern typ_TransferStructure InputTransStruct;
 /**
   * @}
   */ 
@@ -681,16 +682,25 @@ static uint8_t  usbd_cdc_DataOut (void *pdev, uint8_t epnum)
      NAKed till the end of the application Xfer */
   APP_FOPS.pIf_DataRx(USB_Rx_Buffer, USB_Rx_Cnt);
   
-  for (int i=0;i<=3;i++)
-  {
-	  led[i] = USB_Rx_Buffer[i];
-  }
+  u32 Package_ID = *((u32*)USB_Rx_Buffer);
 
-  if(led == "led1")
-  {
-	  GPIO_SetBits(_Diode_GPIO, _Diode_4);
-  }
+	switch(Package_ID)
+	{
+	 case _Input_Designator:
+	 {
+		InputTransStruct.Control_Register  = *((u32*)(&USB_Rx_Buffer[4]));
+		InputTransStruct.Voltage1  = *((float*)(&USB_Rx_Buffer[8]));
+		InputTransStruct.Voltage2  = *((float*)(&USB_Rx_Buffer[12]));
+		InputTransStruct.Temperature = *((float*)(&USB_Rx_Buffer[16]));
+		break;
+	 }
 
+	 default:
+	 {
+		break;
+	 }
+
+	} /* switch */
 
   /* Prepare Out endpoint to receive next packet */
   DCD_EP_PrepareRx(pdev,

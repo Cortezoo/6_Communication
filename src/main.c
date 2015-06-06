@@ -34,15 +34,10 @@ int main(void)
 	  if (TM_USB_VCP_GetStatus() == TM_USB_VCP_CONNECTED)
 	  {
 		  /* Turn on GREEN led */
-		  GPIO_SetBits(_Diode_GPIO, _Diode_1);
-		  /* If something arrived at VCP */
-		  if (TM_USB_VCP_Getc(&c) == TM_USB_VCP_DATA_OK) {
-			  /* Return data back */
-			  TM_USB_VCP_Putc(c);
-		  }
+		  GPIO_SetBits(_Diode_GPIO, _Diode_3);
 	  }else
 	  {
-		  GPIO_ResetBits(_Diode_GPIO, _Diode_1);
+		  GPIO_ResetBits(_Diode_GPIO, _Diode_3);
 	  }
   }
 }

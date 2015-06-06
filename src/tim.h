@@ -19,7 +19,7 @@
 #define us			12.94934
 
 // TIM3 - main timer
-#define _TIM3_Scal			167						// prescaler: 84000000/(83+1) = 1MHz
+#define _TIM3_Scal			83						// prescaler: 84000000/(83+1) = 1MHz
 #define _TIM3_Period		49999 					// period: 1MHz/(9999+1) = 100Hz, 10ms
 
 // TIM8 - PWM

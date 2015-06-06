@@ -15,6 +15,7 @@
 #include "dma.h"
 
 typ_TransferStructure TransStruct;
+typ_TransferStructure InputTransStruct;
 
 extern u8 licznik;
 extern vu16 ADCVal[_ADC1_Size];
@@ -186,7 +187,8 @@ void DMA2_Stream0_IRQHandler(void)
 		voltage2 = ADCVal[1] * _ADC_Calibr_Divider_12bit;
 		temp = (ADCVal[2]*_ADC_Calibr_Divider_12bit*1000 - 760)/2.5 + 25;		// odczyt * (Vmax / 4096) * (3.3 / 2.5)
 
-		TransStruct.Pack_Designator = _Designator;
+		TransStruct.Pack_Designator = _Output_Designator;
+		TransStruct.Control_Register = 0;
 		TransStruct.Voltage1 = voltage1;
 		TransStruct.Voltage2 = voltage2;
 		TransStruct.Temperature = temp;
@@ -194,7 +196,8 @@ void DMA2_Stream0_IRQHandler(void)
 
 		memcpy(buf, &TransStruct, sizeof(typ_TransferStructure));
 
-		TM_USB_VCP_Puts(buf);
+		VCP_DataTx(&buf, sizeof(typ_TransferStructure));
+		//TM_USB_VCP_Puts(buf);
 
 		DMA_ClearFlag(_DMA_ADC, DMA_FLAG_TCIF0);												// czyszczenie flagi
 	}
@@ -233,6 +236,13 @@ void TIM8_UP_TIM13_IRQHandler(void)
 {
 	if(TIM_GetITStatus(TIM8, TIM_IT_Update) != RESET)
 	{
+		if(InputTransStruct.Control_Register & 1)
+		{
+			GPIO_SetBits(_Diode_GPIO, _Diode_1);
+		}else
+		{
+			GPIO_ResetBits(_Diode_GPIO, _Diode_1);
+		}
 		TIM_SetCompare1(TIM8, wypelnienie*599.99);
 		TIM_SetCompare2(TIM8, wypelnienie*599.99);
 		TIM_SetCompare3(TIM8, wypelnienie*599.99);

@@ -15,18 +15,21 @@
 #include "tm_stm32f4_usb_vcp.h"
 
 // defines
-#define _Designator		0xFAFAFAFA
-#define _Closing		0x6F6F6F6F
+#define _Output_Designator		0xFAFAFAFA
+#define _Input_Designator		0xFBFBFBFB
+#define _Closing				0x6F6F6F6F
 
 // structure
 typedef struct typ_TransferStructure
 {
 	u32 Pack_Designator;
+	u32 Control_Register;
 	float Voltage1;
 	float Voltage2;
 	float Temperature;
 	u32 Pack_End;
 }typ_TransferStructure;
+
 
 // declarations
 

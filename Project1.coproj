@@ -88,28 +88,28 @@
     <File name="Libraries/CMSIS/Include" path="" type="2"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h" type="1"/>
-    <File name="Libraries/usb_cdc_device/usbd_ioreq.c" path="Libraries/usb_cdc_device/usbd_ioreq.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h" type="1"/>
+    <File name="Libraries/usb_cdc_device/usbd_ioreq.c" path="Libraries/usb_cdc_device/usbd_ioreq.c" type="1"/>
     <File name="Libraries/Device" path="" type="2"/>
     <File name="Libraries/CMSIS/Include/core_cmInstr.h" path="Libraries/CMSIS/Include/core_cmInstr.h" type="1"/>
-    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h" type="1"/>
-    <File name="Libraries/usb_cdc_device/usb_core.h" path="Libraries/usb_cdc_device/usb_core.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h" type="1"/>
+    <File name="Libraries/usb_cdc_device/usb_core.h" path="Libraries/usb_cdc_device/usb_core.h" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_desc.h" path="Libraries/usb_cdc_device/usbd_desc.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc" path="" type="2"/>
     <File name="Libraries/usb_cdc_device/usbd_cdc_core.c" path="Libraries/usb_cdc_device/usbd_cdc_core.c" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_desc.c" path="Libraries/usb_cdc_device/usbd_desc.c" type="1"/>
     <File name="Libraries/CMSIS/Include/core_cm4_simd.h" path="Libraries/CMSIS/Include/core_cm4_simd.h" type="1"/>
-    <File name="Libraries/usb_cdc_device/usb_dcd.c" path="Libraries/usb_cdc_device/usb_dcd.c" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_req.c" path="Libraries/usb_cdc_device/usbd_req.c" type="1"/>
+    <File name="Libraries/usb_cdc_device/usb_dcd.c" path="Libraries/usb_cdc_device/usb_dcd.c" type="1"/>
     <File name="Libraries/usb_cdc_device/usb_conf.h" path="Libraries/usb_cdc_device/usb_conf.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c" type="1"/>
     <File name="src/rcc.c" path="src/rcc.c" type="1"/>
-    <File name="Libraries/usb_cdc_device/usb_defines.h" path="Libraries/usb_cdc_device/usb_defines.h" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_ioreq.h" path="Libraries/usb_cdc_device/usbd_ioreq.h" type="1"/>
+    <File name="Libraries/usb_cdc_device/usb_defines.h" path="Libraries/usb_cdc_device/usb_defines.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c" type="1"/>
@@ -176,8 +176,8 @@
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" type="1"/>
-    <File name="src/stm32f4xx_conf.h" path="src/stm32f4xx_conf.h" type="1"/>
     <File name="src/dma.c" path="src/dma.c" type="1"/>
+    <File name="src/stm32f4xx_conf.h" path="src/stm32f4xx_conf.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_cdc_vcp.h" path="Libraries/usb_cdc_device/usbd_cdc_vcp.h" type="1"/>
@@ -198,8 +198,8 @@
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c" type="1"/>
     <File name="Libraries/CMSIS/Include/core_cmFunc.h" path="Libraries/CMSIS/Include/core_cmFunc.h" type="1"/>
     <File name="Libraries/usb_cdc_device/usbd_cdc_vcp.c" path="Libraries/usb_cdc_device/usbd_cdc_vcp.c" type="1"/>
-    <File name="src/system_stm32f4xx.c" path="src/system_stm32f4xx.c" type="1"/>
     <File name="Libraries/CMSIS/Include/core_cm4.h" path="Libraries/CMSIS/Include/core_cm4.h" type="1"/>
+    <File name="src/system_stm32f4xx.c" path="src/system_stm32f4xx.c" type="1"/>
     <File name="src/dma.h" path="src/dma.h" type="1"/>
     <File name="Libraries/usb_cdc_device/usb_dcd_int.c" path="Libraries/usb_cdc_device/usb_dcd_int.c" type="1"/>
     <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c" type="1"/>
